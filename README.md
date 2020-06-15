@@ -10,7 +10,7 @@ Recursive solution is trivial, could you do it iteratively?
 
 # Example 1:
 
-![image]()
+![image](https://github.com/eric82714/LeetCode_589--N-ary-Tree-Preorder-Traversal/blob/master/image/example-1.PNG)
 
 Input: root = [1,null,3,2,4,null,5,6]
 
@@ -18,7 +18,7 @@ Output: [1,3,5,6,2,4]
 
 # Example 2:
 
-![image]()
+![image](https://github.com/eric82714/LeetCode_589--N-ary-Tree-Preorder-Traversal/blob/master/image/example-2.PNG)
 
 Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
 
