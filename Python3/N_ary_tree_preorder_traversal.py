@@ -7,13 +7,12 @@ class Node:
 """
 
 class Solution:
-    def postorder(self, root: 'Node') -> List[int]:
+    def preorder(self, root: 'Node') -> List[int]:        
         if not root: return []
         
-        result = []
+        result = [root.val]
         if root.children:
             for child in root.children:
-                result += self.postorder(child)
-        result += [root.val]
-        
+                result += self.preorder(child)
+            
         return result
