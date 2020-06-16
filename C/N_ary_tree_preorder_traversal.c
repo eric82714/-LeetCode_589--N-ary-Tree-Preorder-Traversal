@@ -25,6 +25,8 @@ int* compute(struct Node* root, int* result, int* len) {
     }
     
     int* tmp = malloc(100 * sizeof(int));
+    *len = *len - 1;
+    *(result+*len) = root->val;
     if(root->numChildren != 0) {
         for(int i = 0; i < root->numChildren; i++) {            
             tmp = compute(root->children[i], result, len);
@@ -34,8 +36,6 @@ int* compute(struct Node* root, int* result, int* len) {
             } 
         }
     }
-    *len = *len - 1;
-    *(result+*len) = root->val;
     
     return tmp;
 }
@@ -48,7 +48,7 @@ void reverse(int* arr, int size) {
     }    
 }
 
-int* postorder(struct Node* root, int* returnSize) {
+int* preorder(struct Node* root, int* returnSize) {
     if(!root) {
         *returnSize = 0;
         int* result = malloc(*returnSize * sizeof(int));
